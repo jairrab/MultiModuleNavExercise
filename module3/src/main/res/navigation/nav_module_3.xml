@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_module_3"
+    app:startDestination="@id/module_3_fragment_a">
+
+    <fragment
+        android:id="@+id/module_3_fragment_a"
+        android:name="com.github.jairrab.module3.Module3FragmentA"
+        android:label="StateFlowLauncher"
+        tools:layout="@layout/module_3_fragment_a">
+        <action
+            android:id="@+id/action_module_3_fragment_a_to_module_3_fragment_b"
+            app:destination="@id/module_3_fragment_b" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/module_3_fragment_b"
+        android:name="com.github.jairrab.module3.Module3FragmentB"
+        android:label="StateFlowLauncher"
+        tools:layout="@layout/module_3_fragment_a">
+        <action
+            android:id="@+id/action_module_3_fragment_b_to_module_3_fragment_c"
+            app:destination="@id/module_3_fragment_c" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/module_3_fragment_c"
+        android:name="com.github.jairrab.module3.Module3FragmentC"
+        android:label="StateFlowLauncher"
+        tools:layout="@layout/module_3_fragment_c" />
+
+</navigation>

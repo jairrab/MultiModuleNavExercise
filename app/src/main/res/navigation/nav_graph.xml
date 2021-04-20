@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/module_1_fragment_a">
+
+    <fragment
+        android:id="@+id/module_1_fragment_a"
+        android:name="com.github.jairrab.multimodulenavexercise.fragments.Module1FragmentA"
+        android:label="StateFlowLauncher"
+        tools:layout="@layout/module_1_fragment_a">
+        <action
+            android:id="@+id/action_module_1_fragment_a_to_module_1_fragment_b"
+            app:destination="@id/module_1_fragment_b" />
+        <action
+            android:id="@+id/action_module_1_fragment_a_to_nav_module_2"
+            app:destination="@id/nav_module_2" />
+        <action
+            android:id="@+id/action_module_1_fragment_a_to_nav_module_3"
+            app:destination="@id/nav_module_3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/module_1_fragment_b"
+        android:name="com.github.jairrab.multimodulenavexercise.fragments.Module1FragmentB"
+        android:label="StateFlowLauncher"
+        tools:layout="@layout/module_1_fragment_b">
+        <action
+            android:id="@+id/action_module_1_fragment_b_to_module_1_fragment_c"
+            app:destination="@id/module_1_fragment_c" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/module_1_fragment_c"
+        android:name="com.github.jairrab.multimodulenavexercise.fragments.Module1FragmentC"
+        android:label="StateFlowLauncher"
+        tools:layout="@layout/module_1_fragment_c">
+        <action
+            android:id="@+id/action_module_1_fragment_c_to_nav_module_2"
+            app:destination="@id/nav_module_2" />
+        <action
+            android:id="@+id/action_module_1_fragment_c_to_nav_module_3"
+            app:destination="@id/nav_module_3" />
+    </fragment>
+
+    <include app:graph="@navigation/nav_module_2" />
+    <include app:graph="@navigation/nav_module_3" />
+
+</navigation>
