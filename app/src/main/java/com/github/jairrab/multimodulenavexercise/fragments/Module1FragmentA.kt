@@ -2,6 +2,8 @@ package com.github.jairrab.multimodulenavexercise.fragments
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.net.toUri
+import androidx.navigation.fragment.findNavController
 import com.github.jairrab.core.BaseFragment
 import com.github.jairrab.multimodulenavexercise.R
 import com.github.jairrab.multimodulenavexercise.databinding.Module1FragmentABinding
@@ -18,11 +20,11 @@ class Module1FragmentA: BaseFragment(R.layout.module_1_fragment_a) {
         }
 
         binding.button2.setOnClickListener {
-            navigate(R.id.action_module_1_fragment_a_to_nav_module_2)
+            navigate("myapp://module2".toUri())
         }
 
         binding.button3.setOnClickListener {
-            navigate(R.id.action_module_1_fragment_a_to_nav_module_3)
+            navigate("myapp://module3".toUri())
         }
     }
 }

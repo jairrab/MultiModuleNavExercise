@@ -2,6 +2,7 @@ package com.github.jairrab.module2
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.net.toUri
 import com.github.jairrab.core.BaseFragment
 import com.github.jairrab.module2.databinding.Module2FragmentBBinding
 import com.github.jairrab.viewbindingutility.viewBinding
@@ -13,7 +14,7 @@ class Module2FragmentB: BaseFragment(R.layout.module_2_fragment_b) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.button1.setOnClickListener {
-            navigate(R.id.action_module_2_fragment_b_to_module_2_fragment_c)
+            navigate("myapp://module3".toUri())
         }
     }
 }

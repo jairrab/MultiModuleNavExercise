@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_module_3_fragment_a_to_module_3_fragment_b"
             app:destination="@id/module_3_fragment_b" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="myapp://module3" />
     </fragment>
 
     <fragment
